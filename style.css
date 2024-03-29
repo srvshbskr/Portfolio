@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+
+    --accent:rgb(173, 216, 230);
+    --blue-rgb: 33 150 243;
+    --primary-rgb: var(--blue-rgb);
+    --secondary:lightblue;
+    --background:black;
+}
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+    color: #fff;
+    font-family: 'Poppins';
+    background-color: var(--background);
+    overflow-x: hidden;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+
+}
+
+
+.particle-container{
+    position: relative;
+    z-index: 1;
+
+}
+#particles-js {
+    position: absolute;
+    width: 100vw;
+    height: 260vh;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    opacity: 0.6;
+}
+
+section {
+    position: relative;
+    z-index: 2;
+    margin: 0 5vw;
+}
+
+.main-container{
+
+    height: 100vh;
+}
+
+.skills-container{
+
+    height: 90vh;
+    margin-top: 2em;
+}
+
+
+.standout {
+
+    font-size: 3em;
+    color: var(--secondary);
+
+}
+
+.left {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+.desc {
+
+    opacity: 60%;
+}
+
+
+.skills {
+    width: 100vw;
+    height: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.card {
+
+    height: 100px;
+    width: 240px;
+    background-color: rgb(36, 36, 36);
+    border-radius: 1em;
+    padding: 1em;
+}
+
+.carousel{
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr 1fr 1fr ;
+}
+
+
+.screen {
+    width: 400px;
+    display: flex;
+    border: 3px solid rgb(var(--primary-rgb) / 40%);
+    aspect-ratio: 10 / 16;
+    border-radius: 1rem;
+    background-color: rgb(var(--primary-rgb) / 15%);
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    filter: grayscale(60%);
+  }
+
+  
+.screen:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+}
+
+
+  .screen-overlay {    
+    background: linear-gradient(
+      rgb(var(--primary-rgb) / 0.15),
+      rgb(var(--primary-rgb) / 0.15) 3px,
+      transparent 3px,
+      transparent 9px
+    );
+    background-size: 100% 9px;
+    height: 100%;
+    width: 100%;
+    animation: pan-overlay 22s infinite linear;
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+    top: 0px;
+  }
+
+
+  @keyframes pan-overlay {
+    from {
+      background-position: 0% 0%;
+    }
+    
+    to {
+      background-position: 0% -100%;
+    }
+  }
+
+
+
+  .screen > .screen-image1 {
+    background-image: url(Turbo.jpg);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: 100%;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+    filter: sepia(100%) hue-rotate(160deg);
+    opacity: 0.6;
+  }
+  
+
+  .screen > .screen-image2 {
+    background-image: url(pesticide.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+    position: absolute;
+    z-index: 1;
+    filter: sepia(100%) hue-rotate(160deg);
+    opacity: 0.6;
+  }
+  
+
+  .screen > .screen-image3 {
+    background-image: url(robot.jpg);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: 100%;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+    filter: sepia(100%) hue-rotate(160deg);
+    opacity: 0.6;
+  }
+  
+  
+.project-card {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.845));
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(30%);
+}
+
+.project-info {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    color: #fff; 
+    z-index: 100;
+}
+
+.project-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.project-description {
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+.social-container{
+
+    text-align: center;
+}
+
+.social-icons{
+
+    display: flex;
+    gap: 1em ;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+#main{
+    justify-content: flex-start;
+    margin-top: 1em;
+}
+
+
+.svg{
+
+    width: 28px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+
+}
+
+@media only screen and (max-width:768px) {
+
+    body{
+        /* margin: 0 3vw; */
+        height: 400vh;
+    }
+
+    #particles-js{
+        height:400vh;
+    }
+
+   
+    
+    .main-container{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .standout{
+        font-size: 2em;
+
+    }
+    #name{
+        font-size: 1.3em;
+
+    }   
+
+    .left{
+        width: 100vw;
+
+    }
+
+    .desc{
+        width: 90%;
+        font-size: 1em;
+
+    }
+
+
+    .skills{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 100vw;
+
+    }
+
+    .card{
+
+        height: 50px;
+        display: flex;
+        width: 80vw;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1em;
+        margin-top: 1em;
+
+    }
+
+    
+
+    .screen{
+        width: 300px;
+
+    }
+
+    .carousel{
+        grid-template-columns: 1fr;
+
+    }
+
+}
